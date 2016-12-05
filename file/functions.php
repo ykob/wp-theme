@@ -22,7 +22,7 @@
   remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
   remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
-  // カスタム投稿タイプ設定
+  // カスタムタクソノミーとカスタム投稿タイプの設定
   add_action('init', function() {
     // register_taxonomy('news-category', 'news', array(
     //   'labels' => array(
@@ -49,7 +49,7 @@
 
   // サムネイルサイズ変更
   add_theme_support('post-thumbnails');
-  add_image_size('casestudy-thumb', 700, 420, true);
+  add_image_size('thumb-name', 700, 420, true);
 
   // 固定ページに概要を追加
   add_post_type_support( 'page', 'excerpt' );
