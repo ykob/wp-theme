@@ -1,8 +1,7 @@
 # 記事一覧の取得
 
-'get_posts' を使う。
-
-− [テンプレートタグ/get posts - WordPress Codex 日本語版](https://wpdocs.osdn.jp/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%BF%E3%82%B0/get_posts)
+`get_posts` を使う。  
+[テンプレートタグ/get posts - WordPress Codex 日本語版](https://wpdocs.osdn.jp/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%BF%E3%82%B0/get_posts)
 
     <?php
       $args = array(
