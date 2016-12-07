@@ -11,6 +11,7 @@
       $posts_array = get_posts( $args );
       foreach ( $posts_array as $post ) :
         setup_postdata( $post );
+        $permalink = get_permalink();
         $title = get_the_title();
         $date = get_the_date();
         $terms = get_the_terms(get_the_ID(), 'category or taxonomy-slug');
