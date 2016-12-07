@@ -23,12 +23,12 @@
     <?php
       // カテゴリー一覧を表示
       foreach ( $terms as $term ) {
-        echo '<a href="'. get_term_link( $term->term_id ). '">'. $term->name. '</a>'
+        echo '<a href="'. get_term_link( $term->term_id ). '">'. $term->name. '</a>';
       }
 
       // タグ一覧を表示
       foreach ( $tags as $tag ) {
-        echo '<a href="'. get_tag_link( $tag->term_id ). '">'. $tag->name. '</a>'
+        echo '<a href="'. get_tag_link( $tag->term_id ). '">'. $tag->name. '</a>';
       }
 
       // サムネイルを表示
