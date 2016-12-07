@@ -8,6 +8,8 @@
       $args = array(
         'posts_per_page' => -1,
         'post_type' => 'schedule', // カスタム投稿タイプの場合は指定
+        'tag' => is_tag() ? get_query_var('tag') : '', // タグ一覧の場合は絞り込み
+        'category' => is_category() ? get_query_var('cat') : '', // カテゴリ一覧の場合は絞り込み
       );
       $posts_array = get_posts( $args );
       foreach ( $posts_array as $post ) :
