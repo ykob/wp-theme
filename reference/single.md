@@ -33,7 +33,7 @@
     ?>
       <ul>
       <?php
-          if ( !empty( $adjacent_prev ) ) :
+        if ( !empty( $adjacent_prev ) ) :
       ?>
         <li>
           <a href="<?php echo get_permalink( $adjacent_prev ); ?>">
@@ -41,8 +41,8 @@
           </a>
         </li>
         <?php
-            endif;
-            if ( !empty( $adjacent_next ) ) :
+          endif;
+          if ( !empty( $adjacent_next ) ) :
         ?>
         <li>
           <a href="<?php echo get_permalink( $adjacent_next ); ?>">
@@ -50,7 +50,7 @@
           </a>
         </li>
       <?php
-          endif;
+        endif;
       ?>
       </ul>
     <?php
