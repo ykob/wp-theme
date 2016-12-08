@@ -26,67 +26,60 @@
 
 ## 隣接する記事のリンクを表示する
 
-<?php
-  $adjacent_prev = get_adjacent_post( false, '', true );
-  $adjacent_next = get_adjacent_post( false, '', false );
-  if ( !empty( $adjacent_prev ) || !empty( $adjacent_next ) ) :
-?>
-<ul>
-<?php
-    if ( !empty( $adjacent_prev ) ) :
-?>
-  <div class="c-adjacent-link__item c-adjacent-link__item--prev">
-    <a class="js-pjax c-adjacent-link__item-wrap" href="<?php echo get_permalink( $adjacent_prev ); ?>">
-      <div class="c-adjacent-link__item-icon c-adjacent-link__item-icon--prev"></div>
-      <div class="c-adjacent-link__item-label">
-        <div class="c-adjacent-link__item-label-inner c-adjacent-link__item-label-inner--prev">preview</div>
-      </div>
-    </a>
-  </div>
-  <?php
+    <?php
+      $adjacent_prev = get_adjacent_post( false, '', true );
+      $adjacent_next = get_adjacent_post( false, '', false );
+      if ( !empty( $adjacent_prev ) || !empty( $adjacent_next ) ) :
+    ?>
+      <ul>
+      <?php
+          if ( !empty( $adjacent_prev ) ) :
+      ?>
+        <li>
+          <a href="<?php echo get_permalink( $adjacent_prev ); ?>">
+            <?php echo get_the_title( $adjacent_prev ); ?>
+          </a>
+        </li>
+        <?php
+            endif;
+            if ( !empty( $adjacent_next ) ) :
+        ?>
+        <li>
+          <a href="<?php echo get_permalink( $adjacent_next ); ?>">
+            <?php echo get_the_title( $adjacent_next ); ?>
+          </a>
+        </li>
+      <?php
+          endif;
+      ?>
+      </ul>
+    <?php
       endif;
-      if ( !empty( $adjacent_next ) ) :
-  ?>
-  <li>
-    <a href="<?php echo get_permalink( $adjacent_next ); ?>">
-      <?php echo get_permalink( $adjacent_next ); ?>
-    </a>
-  </li>
-<?php
-    endif;
-?>
-</ul>
-<?php
-  endif;
-?>
+    ?>
 
 ## カテゴリ・タグを元にした関連記事一覧をランダムに表示する
 
-<?php
-  $terms_id = array();
-  foreach( $terms as $term ):
-    array_push( $terms_id, $term->term_id );
-  endforeach;
-  $tags_id = array();
-  foreach( $tags as $tag ):
-    array_push( $tags_id, $tag->term_id );
-  endforeach;
-  $related_args = array(
-    'posts_per_page' => 4,
-    'category__in' => $terms_id,
-    'tag__in' => $tags_id,
-    'orderby' => 'rand',
-  );
-  $related_posts_array = get_posts( $related_args );
-  foreach ( $related_posts_array as $related_post ) :
-    setup_postdata( $related_post );
-    $related_permalink = get_permalink();
-    $related_title = get_the_title();
-?>
-  <a href="<?php echo $related_permalink; ?>">
-    <?php echo $related_title; ?>
-  </a>
-<?php
-  endforeach;
-  wp_reset_postdata();
-?>
+    <?php
+      $terms_id = array();
+      foreach( $terms as $term ) array_push( $terms_id, $term->term_id );
+      $tags_id = array();
+      foreach( $tags as $tag ) array_push( $tags_id, $tag->term_id );
+      $related_args = array(
+        'posts_per_page' => 4,
+        'category__in' => $terms_id,
+        'tag__in' => $tags_id,
+        'orderby' => 'rand',
+      );
+      $related_posts_array = get_posts( $related_args );
+      foreach ( $related_posts_array as $related_post ) :
+        $related_id = $related_post->ID;
+        $related_permalink = get_permalink($related_id);
+        $related_title = get_the_title($related_id);
+        $related_terms = get_the_terms($related_id, 'category');
+    ?>
+      <a href="<?php echo $related_permalink; ?>">
+        <?php echo $related_title; ?>
+      </a>
+    <?php
+      endforeach;
+    ?>
