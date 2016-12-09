@@ -1,5 +1,11 @@
 # wp-theme
 
+## reference
+
+- [各種一覧に関する処理](https://github.com/ykob/wp-theme/blob/master/reference/lists.md)
+- [投稿記事に関する処理](https://github.com/ykob/wp-theme/blob/master/reference/single.md)
+- [PostViewsプラグインの使い方](https://github.com/ykob/wp-theme/blob/master/reference/post-views.md)
+
 ## plugins
 
 よく利用するプラグイン。
