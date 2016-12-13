@@ -13,6 +13,15 @@
       echo $content;
     ?>
 
+上記の場合、改行ごと段落に自動的に形成はしてくれない。  
+そういった挙動をさせたい場合は以下のようにする。
+
+    <?php while( have_posts() ) : the_post(); ?>
+      <?php the_content(); ?>
+    <?php endwhile; ?>
+
+singleページであってもループ処理を行わないと `the_content` が動作しないので注意。
+
 ## アイキャッチのsrc値を取得する
 
 `wp_get_attachment_image_src` を使う。
