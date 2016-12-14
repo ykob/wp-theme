@@ -1,6 +1,7 @@
 <?php
   $meta_path = get_bloginfo('siteurl');
-  $meta_description = "";
+  $meta_description = '';
+
   include 'header.php';
 ?>
 
