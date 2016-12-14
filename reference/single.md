@@ -16,9 +16,12 @@
 上記の場合、改行ごと段落に自動的に形成はしてくれない。  
 そういった挙動をさせたい場合は以下のようにする。
 
-    <?php while( have_posts() ) : the_post(); ?>
-      <?php the_content(); ?>
-    <?php endwhile; ?>
+    <?php
+      while( have_posts() ) {
+        the_post();
+        the_content();
+      }
+    ?>
 
 singleページであってもループ処理を行わないと `the_content` が動作しないので注意。
 
