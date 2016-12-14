@@ -81,6 +81,7 @@ singleページであってもループ処理を行わないと `the_content` �
         'category__in' => $terms_id,
         'tag__in' => $tags_id,
         'orderby' => 'rand',
+        'exclude' => get_the_ID()
       );
       $related_posts_array = get_posts( $related_args );
       foreach ( $related_posts_array as $related_post ) :
