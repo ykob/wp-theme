@@ -16,3 +16,7 @@
 - [WP-PostViews](https://ja.wordpress.org/plugins/wp-postviews/)
 - [SiteGuard WP Plugin](https://www.jp-secure.com/siteguard_wp_plugin/)
 - [MW WP Form](http://plugins.2inc.org/mw-wp-form/)
+
+いつか試すプラグイン。
+
+- [Custom Post Type Permalinks](https://wordpress.org/plugins/custom-post-type-permalinks/other_notes/)
