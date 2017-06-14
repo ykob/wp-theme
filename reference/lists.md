@@ -15,18 +15,19 @@
         'category' => get_cat_ID( 'category_name' ) // カテゴリを指定して絞り込み
       );
       $posts_array = get_posts( $args );
-      foreach ( $posts_array as $post ) :
-        setup_postdata( $post );
-        $id = get_the_id();
-        $permalink = get_permalink();
-        $title = get_the_title();
-        $date = get_the_date();
-        $terms = get_the_terms(get_the_ID(), 'category or taxonomy-slug');
-        $tags = get_the_tags();
-        $excerpt = mb_strimwidth(get_the_excerpt(), 0, 200, '...', 'UTF-8');
-        $content = get_the_content();
-        $thumb = get_the_post_thumbnail($id, 'thumb-name');
-        $cf = SCF::gets(); // Smart Custom Fieldsを持つ場合は指定
+      if ( count($posts_array) > 0 ) :
+        foreach ( $posts_array as $post ) :
+          setup_postdata( $post );
+          $id = get_the_id();
+          $permalink = get_permalink();
+          $title = get_the_title();
+          $date = get_the_date();
+          $terms = get_the_terms(get_the_ID(), 'category or taxonomy-slug');
+          $tags = get_the_tags();
+          $excerpt = mb_strimwidth(get_the_excerpt(), 0, 200, '...', 'UTF-8');
+          $content = get_the_content();
+          $thumb = get_the_post_thumbnail($id, 'thumb-name');
+          $cf = SCF::gets(); // Smart Custom Fieldsを持つ場合は指定
     ?>
 
     <?php
@@ -48,7 +49,8 @@
     ?>
 
     <?php
-      endforeach;
+        endforeach;
+      endif;
       wp_reset_postdata();
     ?>
 
