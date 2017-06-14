@@ -23,7 +23,7 @@
         $date = get_the_date();
         $terms = get_the_terms(get_the_ID(), 'category or taxonomy-slug');
         $tags = get_the_tags();
-        $excerpt = get_the_excerpt();
+        $excerpt = mb_strimwidth(get_the_excerpt(), 0, 200, '...', 'UTF-8');
         $content = get_the_content();
         $thumb = get_the_post_thumbnail($id, 'thumb-name');
         $cf = SCF::gets(); // Smart Custom Fieldsを持つ場合は指定
