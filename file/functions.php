@@ -24,7 +24,7 @@
 
   // カスタムタクソノミーとカスタム投稿タイプの設定
   add_action('init', function() {
-    // register_taxonomy('news-category', 'news', array(
+    // register_taxonomy('tax_news', 'news', array(
     //   'labels' => array(
     //   	'name' => 'お知らせのカテゴリ',
     //   	'all_items' => 'お知らせのカテゴリ一覧',
