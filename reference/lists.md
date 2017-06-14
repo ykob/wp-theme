@@ -17,6 +17,7 @@
       $posts_array = get_posts( $args );
       foreach ( $posts_array as $post ) :
         setup_postdata( $post );
+        $id = get_the_id();
         $permalink = get_permalink();
         $title = get_the_title();
         $date = get_the_date();
@@ -24,6 +25,7 @@
         $tags = get_the_tags();
         $excerpt = get_the_excerpt();
         $content = get_the_content();
+        $thumb = get_the_post_thumbnail($id, 'thumb-name');
         $cf = SCF::gets(); // Smart Custom Fieldsを持つ場合は指定
     ?>
 
