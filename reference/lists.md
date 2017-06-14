@@ -13,6 +13,13 @@
         'tag' => is_tag() ? get_query_var( 'tag' ) : '', // タグ一覧の場合は絞り込み
         'category' => is_category() ? get_query_var( 'cat' ) : '', // カテゴリ一覧の場合は絞り込み
         'category' => get_cat_ID( 'category_name' ) // カテゴリを指定して絞り込み
+        'tax_query' => array( // カスタムタクソノミーで絞り込む場合はtax_queryを使う
+          array(
+            'taxonomy' => 'taxonomy',
+            'field' => 'slug',
+            'terms' => $term
+          )
+        ),
       );
       $posts_array = get_posts( $args );
       if ( count($posts_array) > 0 ) :
