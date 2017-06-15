@@ -29,7 +29,7 @@
           $permalink = get_permalink();
           $title = get_the_title();
           $date = get_the_date();
-          $terms = get_the_terms(get_the_ID(), 'category or taxonomy-slug');
+          $terms = get_the_terms($id, 'category or taxonomy-slug');
           $tags = get_the_tags();
           $excerpt = mb_strimwidth(get_the_excerpt(), 0, 200, '...', 'UTF-8');
           $content = get_the_content();
