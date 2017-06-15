@@ -1,19 +1,9 @@
 <?php
   $website_domain = '';
   $website_name = '';
-  $meta_title_merge = '';
+  $meta_title_merge = ($meta_title) ? $meta_title. '｜'. $website_name : $website_name;
   $meta_keywords_base = '';
-  $meta_keywords_merge = '';
-
-  if ($meta_title) {
-    $meta_title_merge = $meta_title. '｜'. $website_name;
-  } else {
-    $meta_title_merge = $website_name;
-  }
-  if ($meta_keywords != '')
-    $meta_keywords_merge = $meta_keywords. ','. $meta_keywords_base;
-  else
-    $meta_keywords_merge = $meta_keywords_base;
+  $meta_keywords_merge = ($meta_keywords != '') ? $meta_keywords. ','. $meta_keywords_base : $meta_keywords_base;
 ?>
 <!DOCTYPE html>
 <html lang="ja">
