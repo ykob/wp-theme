@@ -13,6 +13,7 @@
 
 - [Custom Post Type Permalinks](https://wordpress.org/plugins/custom-post-type-permalinks/other_notes/)
 - [Smart Custom Fields](https://ja.wordpress.org/plugins/smart-custom-fields/)
+- [Category Order and Taxonomy Terms Order](https://ja.wordpress.org/plugins/taxonomy-terms-order/)
 - [WP-PostViews](https://ja.wordpress.org/plugins/wp-postviews/)
 - [SiteGuard WP Plugin](https://www.jp-secure.com/siteguard_wp_plugin/)
 - [MW WP Form](http://plugins.2inc.org/mw-wp-form/)
