@@ -4,6 +4,7 @@
   $meta_title_merge = ($meta_title) ? $meta_title. '｜'. $website_name : $website_name;
   $meta_keywords_base = '';
   $meta_keywords_merge = ($meta_keywords != '') ? $meta_keywords. ','. $meta_keywords_base : $meta_keywords_base;
+  $meta_ogp_image = ($meta_ogp_image) ? $meta_ogp_image : $website_domain. '/img/common/ogp.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -22,11 +23,11 @@
     <meta property="og:type" content="<?php echo ( $og_type ) ? $og_type : 'website'; ?>">
     <meta property="og:description" content="<?php echo $meta_description ?>">
     <meta property="og:url" content="<?php echo $meta_path ?>">
-    <meta property="og:image" content="<?php echo $website_domain. '/img/common/ogp.jpg' ?>">
+    <meta property="og:image" content="<?php echo $meta_ogp_image ?>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $meta_title_merge ?>">
     <meta name="twitter:description" content="<?php echo $meta_description ?>">
-    <meta name="twitter:image" content="<?php echo $website_domain. '/img/common/ogp.jpg' ?>">
+    <meta name="twitter:image" content="<?php echo $meta_ogp_image ?>">
     <?php wp_head(); ?>
   </head>
   <body>
