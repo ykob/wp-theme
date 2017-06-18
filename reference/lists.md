@@ -74,6 +74,7 @@
       	'order' => 'ASC',
       	'hide_empty' => 1,
       	'hierarchical' => 1,
+        'parent' => 0, // 親カテゴリのみ表示させたい場合はparent値を0にする。
       	'taxonomy' => 'category'
       );
       $categories = get_categories( $args );
