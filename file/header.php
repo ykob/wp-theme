@@ -4,7 +4,7 @@
   $meta_title_merge = ($meta_title) ? $meta_title. '｜'. $website_name : $website_name;
   $meta_keywords_base = '';
   $meta_keywords_merge = ($meta_keywords != '') ? $meta_keywords. ','. $meta_keywords_base : $meta_keywords_base;
-  $meta_ogp_image = ($meta_ogp_image) ? $meta_ogp_image : $website_domain. '/img/common/ogp.jpg';
+  if ( !$meta_ogp_image ) $meta_ogp_image = : $website_domain. '/img/common/ogp.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
