@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/css/main.min.css">
     <meta property="og:title" content="<?php echo $meta_title_merge ?>">
     <meta property="og:site_name" content="<?php echo $website_name ?>">
-    <meta property="og:type" content="<?php echo ( $og_type ) ? $og_type : 'website'; ?>">
+    <meta property="og:type" content="<?php echo ( $meta_ogp_type ) ? $meta_ogp_type : 'website'; ?>">
     <meta property="og:description" content="<?php echo $meta_description ?>">
     <meta property="og:url" content="<?php echo $meta_path ?>">
     <meta property="og:image" content="<?php echo $meta_ogp_image ?>">

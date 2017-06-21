@@ -5,7 +5,7 @@
   $meta_title = $term_data->name. 'カテゴリの記事一覧';
   $meta_description = $term_data->description;
   $meta_keywords = '';
-  $og_type = 'website';
+  $meta_ogp_type = 'website';
   $cf = SCF::get_term_meta( $term_data->term_id, $taxonomy ); // Smart Custom Fieldsを使う場合は指定
 
   include 'header.php';

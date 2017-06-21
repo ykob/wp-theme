@@ -7,7 +7,7 @@
   $meta_title = get_the_title();
   $meta_description = get_the_excerpt();
   $meta_keywords = '';
-  $og_type = 'article';
+  $meta_ogp_type = 'article';
   $meta_ogp_image = $kv_array[0];
 
   include 'header.php';
