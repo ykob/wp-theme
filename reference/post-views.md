@@ -5,11 +5,11 @@ https://wordpress.org/plugins/wp-postviews/faq/
 
 ## view数の出力
 
-    <?php if ( function_exists( 'the_views' ) ): ?>
-      <p>
-        <?php the_views(); ?>
-      </p>
-    <?php endif; ?>
+プラグイン独自のview数呼び出しの関数`the_views()`は、第一引数に`false`を指定すると`html`は`echo`されず値だけを取得することができる。
+
+    <?php
+      $view = ( function_exists( 'the_views' ) ) ? the_views(false) : null;
+    ?>
 
 ## view数順の記事一覧の出力
 
