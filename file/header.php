@@ -1,5 +1,5 @@
 <?php
-  $website_domain = '';
+  $website_domain = get_bloginfo('url');
   $website_name = '';
   $meta_title_merge = ($meta_title) ? $meta_title. '｜'. $website_name : $website_name;
   $meta_keywords_base = '';
