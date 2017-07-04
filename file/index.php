@@ -1,5 +1,5 @@
 <?php
-  $meta_path = get_bloginfo('siteurl');
+  $meta_path = get_bloginfo( 'siteurl' );
   $meta_description = '';
   $meta_keywords = '';
 

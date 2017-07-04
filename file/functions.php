@@ -23,8 +23,8 @@
   remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
   // カスタムタクソノミーとカスタム投稿タイプの設定
-  add_action('init', function() {
-    // register_taxonomy('tax_news', 'news', array(
+  add_action( 'init', function() {
+    // register_taxonomy( 'tax_news', 'news', array(
     //   'labels' => array(
     //   	'name' => 'お知らせのカテゴリ',
     //   	'all_items' => 'お知らせのカテゴリ一覧',
@@ -34,22 +34,22 @@
     //     'slug' => 'news',
     //   ),
     // ));
-    // register_post_type('news', array(
+    // register_post_type( 'news', array(
     //   'labels' => array(
     //   	'name' => 'お知らせ',
     //   	'all_items' => '投稿一覧',
     //   ),
     //   'public'      => true,
     //   'has_archive' => true,
-    //   'rewrite'     => array('slug' => 'news'),
+    //   'rewrite'     => array( 'slug' => 'news' ),
     //   'menu_position'	 => 99,
-    //   'supports'    => array('title', 'editor', 'excerpt'),
+    //   'supports'    => array( 'title', 'editor', 'excerpt' ),
     // ));
   });
 
   // サムネイルサイズ変更
-  add_theme_support('post-thumbnails');
-  add_image_size('thumb-name', 700, 420, true);
+  add_theme_support( 'post-thumbnails' );
+  add_image_size( 'thumb-name', 700, 420, true );
 
   // サムネイルにsrcsetが自動付与されてしまうのを解除
   add_filter( 'max_srcset_image_width', create_function( '', 'return 1;' ) );
@@ -58,10 +58,10 @@
   add_post_type_support( 'page', 'excerpt' );
 
   // URLの末尾にスラッシュをつける。
-  add_filter('user_trailingslashit', 'add_slash_uri_end', 10, 2);
-  function add_slash_uri_end($uri, $type) {
-    if ($type != 'single') {
-      $uri = trailingslashit($uri);
+  add_filter( 'user_trailingslashit', 'add_slash_uri_end', 10, 2 );
+  function add_slash_uri_end( $uri, $type ) {
+    if ( $type != 'single' ) {
+      $uri = trailingslashit( $uri );
     }
     return $uri;
   }
