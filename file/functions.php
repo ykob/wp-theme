@@ -65,4 +65,17 @@
     }
     return $uri;
   }
+
+  // $typenow の変数値によって、ビジュアルエディタを非表示にする
+  function disable_visual_editor_in_page(){
+    global $typenow;
+    if( $typenow == 'page' || $typenow == 'mw-wp-form' ){
+      add_filter('user_can_richedit', 'disable_visual_editor_filter');
+    }
+  }
+  function disable_visual_editor_filter(){
+    return false;
+  }
+  add_action( 'load-post.php', 'disable_visual_editor_in_page' );
+  add_action( 'load-post-new.php', 'disable_visual_editor_in_page' );
 ?>
