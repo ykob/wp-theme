@@ -26,8 +26,8 @@
   add_action( 'init', function() {
     // register_taxonomy( 'tax_news', 'news', array(
     //   'labels' => array(
-    //   	'name' => 'お知らせのカテゴリ',
-    //   	'all_items' => 'お知らせのカテゴリ一覧',
+    //     'name' => 'お知らせのカテゴリ',
+    //     'all_items' => 'お知らせのカテゴリ一覧',
     //   ),
     //   'hierarchical' => true,
     //   'rewrite' => array(
@@ -36,13 +36,13 @@
     // ));
     // register_post_type( 'news', array(
     //   'labels' => array(
-    //   	'name' => 'お知らせ',
-    //   	'all_items' => '投稿一覧',
+    //     'name' => 'お知らせ',
+    //     'all_items' => '投稿一覧',
     //   ),
     //   'public'      => true,
     //   'has_archive' => true,
     //   'rewrite'     => array( 'slug' => 'news' ),
-    //   'menu_position'	 => 99,
+    //   'menu_position'   => 99,
     //   'supports'    => array( 'title', 'editor', 'excerpt' ),
     // ));
   });

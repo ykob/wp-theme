@@ -69,13 +69,13 @@
 
     <?php
       $args = array(
-      	'type' => 'post',
-      	'orderby' => 'name',
-      	'order' => 'ASC',
-      	'hide_empty' => 1,
-      	'hierarchical' => 1,
+        'type' => 'post',
+        'orderby' => 'name',
+        'order' => 'ASC',
+        'hide_empty' => 1,
+        'hierarchical' => 1,
         'parent' => 0, // 親カテゴリのみ表示させたい場合はparent値を0にする。
-      	'taxonomy' => 'category'
+        'taxonomy' => 'category'
       );
       $categories = get_categories( $args );
       foreach ( $categories as $category ) {
