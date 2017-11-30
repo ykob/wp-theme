@@ -22,7 +22,7 @@ WordPressではURLパラメータの`paged`の値が自動的に`$paged`変数�
         $center = max($peger_width + 1, min($pager_count - $peger_width, $page_index));
         $added_ellipsis_prev = false;
         $added_ellipsis_next = false;
-        $html = '<div class="p-pager c-fade-in js-scroll-item">';
+        $html = '<div class="p-pager">';
 
         if ( $page_index > 1 ) :
           $val = $page_index - 1;
