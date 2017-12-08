@@ -24,14 +24,24 @@
 
   // カスタムタクソノミーとカスタム投稿タイプの設定
   add_action( 'init', function() {
-    // register_taxonomy( 'tax_news', 'news', array(
+    // register_taxonomy( 'cat_news', 'news', array(
     //   'labels' => array(
     //     'name' => 'お知らせのカテゴリ',
     //     'all_items' => 'お知らせのカテゴリ一覧',
     //   ),
     //   'hierarchical' => true,
     //   'rewrite' => array(
-    //     'slug' => 'news',
+    //     'slug' => 'news/category',
+    //   ),
+    // ));
+    // register_taxonomy( 'tag_news', 'news', array(
+    //   'labels' => array(
+    //     'name' => 'お知らせのタグ',
+    //     'all_items' => 'お知らせのタグ一覧',
+    //   ),
+    //   'hierarchical' => false,
+    //   'rewrite' => array(
+    //     'slug' => 'news/category',
     //   ),
     // ));
     // register_post_type( 'news', array(
