@@ -1,4 +1,9 @@
 <?php
+// 外部ファイル化されている関数を読み込み
+  locate_template('functions/thumbnails.php', true);
+  locate_template('functions/util.php', true);
+
+  // ログイン状態でもツールバーを非表示にする
   show_admin_bar( false );
 
   // wp_head()が書き出すタグの一部削除
