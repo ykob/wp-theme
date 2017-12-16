@@ -57,7 +57,7 @@
     //   'public'      => true,
     //   'has_archive' => true,
     //   'rewrite'     => array( 'slug' => 'news' ),
-    //   'menu_position'   => 99,
+    //   'menu_position'   => 5,
     //   'supports'    => array( 'title', 'editor', 'excerpt' ),
     // ));
   });
