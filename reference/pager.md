@@ -35,7 +35,7 @@ WordPressではURLパラメータの`paged`の値が自動的に`$paged`変数�
             ( $i >= $center - $peger_width && $i <= $center + $peger_width )
             || $i == 1 || $i == $pager_count
             ):
-            $html .= '<a class="p-pager__item p-pager__item--num" href="{$path}page/{$i}/">'. {$i}. '</a>';
+            $html .= '<a class="p-pager__item p-pager__item--num" href="{$path}page/'. $i. '/">'. $i. '</a>';
           elseif ( $added_ellipsis_prev === false && $i < $center + $peger_width ) :
             $html .= '<span class="p-pager__item p-pager__item--ellipsis">...</span>';
             $added_ellipsis_prev = true;
