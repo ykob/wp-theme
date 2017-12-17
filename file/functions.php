@@ -1,6 +1,7 @@
 <?php
-// 外部ファイル化されている関数を読み込み
+  // 外部ファイル化されている関数を読み込み
   locate_template('functions/thumbnails.php', true);
+  locate_template('functions/shortcodes.php', true);
   locate_template('functions/util.php', true);
 
   // ログイン状態でもツールバーを非表示にする
