@@ -1,5 +1,10 @@
 <?php
+  // 投稿idを取得
   $id = get_the_id();
+
+  // Smart Custom Fieldsのデータを取得
+  $cf = SCF::gets();
+
   $kv_array = wp_get_attachment_image_src( get_post_thumbnail_id(), false );
   $kv_src = ( $kv_array[0] ) ? $kv_array[0] : '/img/common/thumb_default.jpg';
 
