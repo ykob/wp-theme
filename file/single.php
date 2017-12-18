@@ -5,7 +5,7 @@
   // Smart Custom Fieldsのデータを取得
   $cf = SCF::gets();
 
-  $kv_array = wp_get_attachment_image_src( get_post_thumbnail_id(), false );
+  $kv_array = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumnail-name', false );
   $kv_src = ( $kv_array[0] ) ? $kv_array[0] : '/img/common/thumb_default.jpg';
 
   $meta_path = get_the_permalink();
