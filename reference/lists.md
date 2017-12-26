@@ -68,6 +68,7 @@
 [関数リファレンス/get categories - WordPress Codex 日本語版](https://wpdocs.osdn.jp/関数リファレンス/get_categories)
 
     <?php
+      $category_slug = 'category';
       $args = array(
         'type' => 'post',
         'orderby' => 'name',
@@ -75,11 +76,11 @@
         'hide_empty' => 1,
         'hierarchical' => 1,
         'parent' => 0, // 親カテゴリのみ表示させたい場合はparent値を0にする。
-        'taxonomy' => 'category'
+        'taxonomy' => $category_slug
       );
       $categories = get_categories( $args );
       foreach ( $categories as $category ) {
-        echo '<a href="'. get_category_link( $category->term_id ). '">'. $category->name. '</a>';
+        echo '<a href="'. get_term_link( $category->term_id, $category_slug ). '">'. $category->name. '</a>';
       }
     ?>
 
