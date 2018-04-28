@@ -55,11 +55,14 @@
     //     'name' => 'お知らせ',
     //     'all_items' => '投稿一覧',
     //   ),
-    //   'public'      => true,
+    //   'public' => true,
     //   'has_archive' => true,
-    //   'rewrite'     => array( 'slug' => 'news' ),
-    //   'menu_position'   => 5,
-    //   'supports'    => array( 'title', 'editor', 'excerpt' ),
+    //   'rewrite' => array(
+    //     'slug' => 'news',
+    //     'with_front' => false
+    //   ),
+    //   'menu_position' => 5,
+    //   'supports' => array( 'title', 'editor', 'excerpt' ),
     // ));
   });
 
