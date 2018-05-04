@@ -1,6 +1,6 @@
 <?php
   // pタグが自動挿入されるのを防ぐ
-  remove_filter('the_content', 'wpautop');
+  remove_filter( 'the_content', 'wpautop' );
   remove_filter( 'the_excerpt', 'wpautop' );
 
   // Smart Custom Fieldsのデータを取得
