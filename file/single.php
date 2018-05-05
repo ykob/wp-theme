@@ -16,8 +16,11 @@
   $meta_ogp_image = $kv_array[0];
 
   include 'header.php';
-?>
 
-<?php
+  while( have_posts() ) {
+    the_post();
+    the_content();
+  }
+
   get_footer();
 ?>
