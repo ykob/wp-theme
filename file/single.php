@@ -15,6 +15,9 @@
   $meta_ogp_type = 'article';
   $meta_ogp_image = $kv_array[0];
 
+  $post_data = get_the_date();
+  $post_terms = get_the_terms( $id, 'category or texonomy_slug' );
+
   include 'header.php';
 
   while( have_posts() ) {
