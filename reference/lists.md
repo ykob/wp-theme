@@ -9,6 +9,7 @@
     <?php
       $args = array(
         'posts_per_page' => -1,
+        'offset' => ($page_index - 1) * $posts_per_page, // ページャによる記事一覧の分割を行うなどの場合にはオフセット値を指定
         'post_type' => 'posttype', // カスタム投稿タイプの場合は指定
         'tag' => is_tag() ? get_query_var( 'tag' ) : '', // タグ一覧の場合は絞り込み
         'category' => is_category() ? get_query_var( 'cat' ) : '', // カテゴリ一覧の場合は絞り込み
