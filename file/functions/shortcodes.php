@@ -1,6 +1,6 @@
 <?php
   // 指定のphpを呼び出す
-  function includeMyPhpFunc( $params = array() ) {
+  function include_myphp_func( $params = array() ) {
     extract(
       shortcode_atts( array(
         'file' => 'default'
@@ -10,5 +10,5 @@
     include(get_theme_root(). '/'. get_template(). '/template/'. $file. '.php');
     return ob_get_clean();
   }
-  add_shortcode('includeMyPhp', 'includeMyPhpFunc');
+  add_shortcode('include_myphp', 'include_myphp_func');
 ?>
