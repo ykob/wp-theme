@@ -24,7 +24,7 @@
       );
       $posts_array = get_posts( $args );
       if ( count($posts_array) > 0 ) :
-        foreach ( $posts_array as $post ) :
+        foreach ( $posts_array as $index => $post ) :
           setup_postdata( $post );
           $id = get_the_id();
           $permalink = get_permalink();
@@ -40,12 +40,12 @@
 
     <?php
       // カテゴリー一覧を表示
-      foreach ( $terms as $term ) {
+      foreach ( $terms as $index => $term ) {
         echo '<a href="'. get_term_link( $term->term_id ). '">'. $term->name. '</a>';
       }
 
       // タグ一覧を表示
-      foreach ( $tags as $tag ) {
+      foreach ( $tags as $index => $tag ) {
         echo '<a href="'. get_tag_link( $tag->term_id ). '">'. $tag->name. '</a>';
       }
 
@@ -80,7 +80,7 @@
         'taxonomy' => $category_slug
       );
       $categories = get_categories( $args );
-      foreach ( $categories as $category ) {
+      foreach ( $categories as $index => $category ) {
         echo '<a href="'. get_term_link( $category->term_id, $category_slug ). '">'. $category->name. '</a>';
       }
     ?>
@@ -98,7 +98,7 @@
         'hide_empty' => 1,
       );
       $tags = get_tags( $args );
-      foreach ( $tags as $tag ) {
+      foreach ( $tags as $index => $tag ) {
         echo '<a href="'. get_tag_link( $tag->term_id ). '">'. $tag->name. '</a>';
       }
     ?>
