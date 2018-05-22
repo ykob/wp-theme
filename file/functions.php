@@ -38,6 +38,7 @@
     //   'hierarchical' => true,
     //   'rewrite' => array(
     //     'slug' => 'news/category',
+    //     'with_front' => false,
     //   ),
     // ));
     // register_taxonomy( 'tag_news', 'news', array(
@@ -59,7 +60,7 @@
     //   'has_archive' => true,
     //   'rewrite' => array(
     //     'slug' => 'news',
-    //     'with_front' => false
+    //     'with_front' => false,
     //   ),
     //   'menu_position' => 5,
     //   'supports' => array( 'title', 'editor', 'excerpt' ),
