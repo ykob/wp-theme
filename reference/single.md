@@ -86,10 +86,10 @@ singleページであってもループ処理を行わないと `the_content` �
       $related_posts_array = get_posts( $related_args );
       foreach ( $related_posts_array as $related_post ) :
         $related_id = $related_post->ID;
-        $related_permalink = get_permalink($related_id);
-        $related_thumb = get_the_post_thumbnail($related_id, 'thumbnail');
-        $related_title = get_the_title($related_id);
-        $related_terms = get_the_terms($related_id, 'category');
+        $related_permalink = get_permalink( $related_id );
+        $related_thumb = get_the_post_thumbnail( $related_id, 'thumbnail' );
+        $related_title = get_the_title( $related_id );
+        $related_terms = get_the_terms( $related_id, 'category' );
     ?>
       <a href="<?php echo $related_permalink; ?>">
         <?php echo $related_title; ?>

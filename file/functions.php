@@ -1,8 +1,8 @@
 <?php
   // 外部ファイル化されている関数を読み込み
-  locate_template('functions/thumbnails.php', true);
-  locate_template('functions/shortcodes.php', true);
-  locate_template('functions/util.php', true);
+  locate_template( 'functions/thumbnails.php', true );
+  locate_template( 'functions/shortcodes.php', true );
+  locate_template( 'functions/util.php', true );
 
   // ログイン状態でもツールバーを非表示にする
   show_admin_bar( false );
@@ -80,13 +80,13 @@
   }
 
   // $typenow の変数値によって、ビジュアルエディタを非表示にする
-  function disable_visual_editor_in_page(){
+  function disable_visual_editor_in_page() {
     global $typenow;
     if( $typenow == 'page' || $typenow == 'mw-wp-form' ){
       add_filter( 'user_can_richedit', 'disable_visual_editor_filter' );
     }
   }
-  function disable_visual_editor_filter(){
+  function disable_visual_editor_filter() {
     return false;
   }
   add_action( 'load-post.php', 'disable_visual_editor_in_page' );

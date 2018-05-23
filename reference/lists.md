@@ -9,7 +9,7 @@
     <?php
       $args = array(
         'posts_per_page' => -1,
-        'offset' => ($page_index - 1) * $posts_per_page, // ページャによる記事一覧の分割を行うなどの場合にはオフセット値を指定
+        'offset' => ( $page_index - 1 ) * $posts_per_page, // ページャによる記事一覧の分割を行うなどの場合にはオフセット値を指定
         'post_type' => 'posttype', // カスタム投稿タイプの場合は指定
         'tag' => is_tag() ? get_query_var( 'tag' ) : '', // タグ一覧の場合は絞り込み
         'category' => is_category() ? get_query_var( 'cat' ) : '', // カテゴリ一覧の場合は絞り込み
@@ -30,11 +30,11 @@
           $permalink = get_permalink();
           $title = get_the_title();
           $date = get_the_date();
-          $terms = get_the_terms($id, 'category or taxonomy-slug');
+          $terms = get_the_terms( $id, 'category or taxonomy-slug' );
           $tags = get_the_tags();
-          $excerpt = mb_strimwidth(get_the_excerpt(), 0, 200, '...', 'UTF-8');
+          $excerpt = mb_strimwidth( get_the_excerpt(), 0, 200, '...', 'UTF-8' );
           $content = get_the_content();
-          $thumb = get_the_post_thumbnail($id, 'thumb-name');
+          $thumb = get_the_post_thumbnail( $id, 'thumb-name' );
           $cf = SCF::gets(); // Smart Custom Fieldsを持つ場合は指定
     ?>
 

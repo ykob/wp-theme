@@ -2,6 +2,6 @@
   /*
   Template Name: Redirect
   */
-  header('Location: /');
+  header( 'Location: /' );
   exit;
 ?>

@@ -6,7 +6,7 @@ WordPressではURLパラメータの`paged`の値が自動的に`$paged`変数�
 これを元にして現在の分割ページ位置を定義しておく。  
 それと合わせて、ページ全件分の情報と、分割1ページあたりの表示件数も定義しておき、ページャ生成に利用する。
 
-    $page_index = ( empty($paged) ) ? 1 : $paged;
+    $page_index = ( empty( $paged ) ) ? 1 : $paged;
     $posts_per_page = 15;
     $posts_array = get_posts( $args );
 
@@ -15,11 +15,11 @@ WordPressではURLパラメータの`paged`の値が自動的に`$paged`変数�
 `function.php`に以下を記載しておけば、テーマファイル内で`getPager()`を実行することでページャを呼び出せる。  
 引数で、投稿データの配列`$posts_array`、1ページの表示件数`$posts_per_page`、現在が何ページ目かを表す数値`$page_index`、そのページのパーマリンク`$path`を渡せるようにしておく。
 
-    function getPager($posts_array, $posts_per_page, $page_index, $path) {
-      if ( count($posts_array) > $posts_per_page ) :
+    function getPager( $posts_array, $posts_per_page, $page_index, $path ) {
+      if ( count( $posts_array ) > $posts_per_page ) :
         $peger_width = 1;
-        $pager_count = floor( (count($posts_array) - 1) / $posts_per_page ) + 1;
-        $center = max($peger_width + 1, min($pager_count - $peger_width, $page_index));
+        $pager_count = floor( (count( $posts_array) - 1 ) / $posts_per_page ) + 1;
+        $center = max( $peger_width + 1, min( $pager_count - $peger_width, $page_index ) );
         $added_ellipsis_prev = false;
         $added_ellipsis_next = false;
         $html = '<div class="p-pager">';

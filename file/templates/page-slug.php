@@ -16,9 +16,9 @@ Template Name: Page Template
   $meta_keywords = '';
   $meta_ogp_type = 'website';
 
-  include(TEMPLATEPATH. '/header.php');
+  include( TEMPLATEPATH. '/header.php' );
 ?>
 
 <?php
-  include(TEMPLATEPATH. '/footer.php');
+  include( TEMPLATEPATH. '/footer.php' );
 ?>
