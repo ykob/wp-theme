@@ -1,10 +1,11 @@
 <?php
+  $template_url = get_bloginfo( 'template_url' );
   $website_domain = get_bloginfo( 'url' );
   $website_name = '';
   $meta_title_merge = ( $meta_title ) ? $meta_title. ' | '. $website_name : $website_name;
   $meta_keywords_base = '';
   $meta_keywords_merge = ( $meta_keywords != '' ) ? $meta_keywords. ','. $meta_keywords_base : $meta_keywords_base;
-  if ( !$meta_ogp_image ) $meta_ogp_image = $website_domain. '/img/common/ogp.jpg';
+  if ( !$meta_ogp_image ) $meta_ogp_image = $template_url. '/assets/img/common/ogp.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -16,8 +17,12 @@
     <meta name="description" content="<?php echo $meta_description ?>">
     <meta name="keywords" content="<?php echo $meta_keywords_merge ?>">
     <meta name="theme-color" content="#ffffff">
-    <link rel="shortcut icon" href="/img/common/favicon.ico">
-    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+    <link rel="icon" href="<?php echo $template_url; ?>/assets/img/common/icon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $template_url; ?>/assets/img/common/app_icon.png">
+    <meta name="msapplication-TileImage" content="<?php echo $template_url; ?>/assets/img/common/ms_tileimage.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="<?php echo $meta_title_merge ?>">
     <meta property="og:site_name" content="<?php echo $website_name ?>">
     <meta property="og:type" content="<?php echo ( $meta_ogp_type ) ? $meta_ogp_type : 'website'; ?>">
