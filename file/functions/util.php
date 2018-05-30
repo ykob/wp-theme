@@ -18,7 +18,7 @@
     $number = $wpdb->get_var( "
       SELECT COUNT( * )
       FROM $wpdb->posts
-      WHERE menu_order {$op} '{$post->menu_order}'
+      WHERE post_date {$op} '{$post->post_date}'
       AND post_status = 'publish'
       AND post_type = ('{$post_type}')
     " );
