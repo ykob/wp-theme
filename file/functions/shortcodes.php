@@ -35,4 +35,19 @@
     return $posts_html;
   }
   add_shortcode( 'get_posts', 'get_posts_func' );
+
+  // 記事の本文を取得する
+  function getPostContentFunc( $args ) {
+    global $post;
+
+    extract( $args );
+    ob_start();
+
+    $post_obj = get_post( $post_id );
+    $post_html = $post_obj->post_content;
+
+    ob_end_clean();
+    return $post_html;
+  }
+  add_shortcode( 'getPostContent', 'getPostContentFunc' );
 ?>
