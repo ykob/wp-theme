@@ -1,6 +1,6 @@
 <?php
   $meta_path = get_bloginfo( 'url' );
-  $meta_description = '';
+  $meta_description = get_bloginfo( 'description' );
   $meta_keywords = '';
 
   include 'header.php';
