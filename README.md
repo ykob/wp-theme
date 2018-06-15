@@ -8,6 +8,7 @@
 - [検索機能に関する処理](https://github.com/ykob/wp-theme/blob/master/reference/search.md)
 - [ページャに関する処理](https://github.com/ykob/wp-theme/blob/master/reference/pager.md)
 - [PostViewsプラグインの使い方](https://github.com/ykob/wp-theme/blob/master/reference/post-views.md)
+- [よくつかうhtaccessの記述](https://github.com/ykob/wp-theme/blob/master/reference/htaccess.md)
 - [WP REST APIの使い方](https://github.com/ykob/wp-theme/blob/master/reference/rest-api.md)
 
 ## plugins
