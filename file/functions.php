@@ -63,7 +63,7 @@
     //     'with_front' => false,
     //   ),
     //   'menu_position' => 5,
-    //   'supports' => array( 'title', 'editor', 'excerpt' ),
+    //   'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
     // ));
   });
 
