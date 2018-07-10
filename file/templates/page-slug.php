@@ -2,11 +2,12 @@
 /*
 Template Name: Page Template
 */
+
   // pタグが自動挿入されるのを防ぐ
   remove_filter( 'the_content', 'wpautop' );
   remove_filter( 'the_excerpt', 'wpautop' );
 
-  // Smart Custom Fieldsのデータを取得
+  // Smart Custom Fieldsを使う場合は指定
   $cf = SCF::gets();
 
   // メタ情報を取得
