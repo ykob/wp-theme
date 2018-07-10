@@ -7,7 +7,7 @@
       ), $params )
     );
     ob_start();
-    include(get_theme_root(). '/'. get_template(). '/template/'. $file. '.php');
+    include( get_theme_root(). '/'. get_template(). '/template/'. $file. '.php' );
     return ob_get_clean();
   }
   add_shortcode( 'include_myphp', 'include_myphp_func' );
