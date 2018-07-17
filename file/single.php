@@ -6,6 +6,9 @@
   $cf = SCF::gets();
 
   $post_title = get_the_title();
+  $post_data = get_the_date();
+  $post_terms = get_the_terms( $id, 'category or texonomy_slug' );
+
   $kv_array = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumnail-name', false );
   $kv_src = ( $kv_array[0] ) ? $kv_array[0] : '/img/common/thumb_default.jpg';
 
@@ -15,9 +18,6 @@
   $meta_keywords = '';
   $meta_ogp_type = 'article';
   $meta_ogp_image = $kv_array[0];
-
-  $post_data = get_the_date();
-  $post_terms = get_the_terms( $id, 'category or texonomy_slug' );
 
   include 'header.php';
 
