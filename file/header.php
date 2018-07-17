@@ -16,7 +16,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<?php echo $meta_description ?>">
     <meta name="keywords" content="<?php echo $meta_keywords_merge ?>">
-    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
     <link rel="icon" href="<?php echo $template_url; ?>/assets/img/common/icon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $template_url; ?>/assets/img/common/app_icon.png">
