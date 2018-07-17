@@ -30,7 +30,7 @@ WordPressではURLパラメータの`paged`の値が自動的に`$paged`変数�
         endif;
         for ( $i = 1; $i <= $pager_count; $i++ ) :
           if ( $i == $page_index ) :
-            $html .= '<span class="p-pager__item">'. {$i}. '</span>';
+            $html .= '<span class="p-pager__item">'. $i. '</span>';
           elseif (
             ( $i >= $center - $peger_width && $i <= $center + $peger_width )
             || $i == 1 || $i == $pager_count
