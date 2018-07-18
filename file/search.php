@@ -1,6 +1,8 @@
 <?php
   global $wp_query;
   $keyword_search = $wp_query->query['s'];
+
+  // メタ情報を定義
   $meta_path = $_SERVER["HTTP_HOST"]. $_SERVER["REQUEST_URI"];
   $meta_title = '「'. $keyword_search. '」の検索結果';
   $meta_description = '「'. $keyword_search. '」の検索結果を表示しています。';

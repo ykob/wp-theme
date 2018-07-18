@@ -15,7 +15,7 @@ WordPressではURLパラメータの`paged`の値が自動的に`$paged`変数�
 `function.php`に以下を記載しておけば、テーマファイル内で`getPager()`を実行することでページャを呼び出せる。  
 引数で、投稿データの配列`$posts_array`、1ページの表示件数`$posts_per_page`、現在が何ページ目かを表す数値`$page_index`、そのページのパーマリンク`$path`を渡せるようにしておく。
 
-    function getPager( $posts_array, $posts_per_page, $page_index, $path ) {
+    function get_pager( $posts_array, $posts_per_page, $page_index, $path ) {
       if ( count( $posts_array ) > $posts_per_page ) :
         $peger_width = 1;
         $pager_count = floor( (count( $posts_array) - 1 ) / $posts_per_page ) + 1;

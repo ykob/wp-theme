@@ -1,4 +1,5 @@
 <?php
+// メタ情報を定義
   $meta_path = get_post_type_archive_link( 'posttype' );
   $meta_title = date( 'Y', get_post_time() );
   $meta_description = '';
