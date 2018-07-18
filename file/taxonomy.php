@@ -1,9 +1,10 @@
 <?php
-  $taxonomy = 'tax_news';
-  $term_data = get_term_by( 'slug', $term, $taxonomy );
-
   // Smart Custom Fieldsを使う場合は指定
   $cf = SCF::get_term_meta( $term_data->term_id, $taxonomy );
+
+  // ページの固有変数を定義
+  $taxonomy = 'tax_news';
+  $term_data = get_term_by( 'slug', $term, $taxonomy );
 
   // メタ情報を定義
   $meta_path = get_term_link( $term, $taxonomy );

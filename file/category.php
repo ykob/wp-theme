@@ -1,4 +1,6 @@
 <?php
+  // ページの固有変数を定義
+  $page_id = 'archive';
   $category_id = get_query_var( 'cat' );
   $category_name = get_the_category_by_ID( $category_id );
 
