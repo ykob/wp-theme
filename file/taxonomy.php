@@ -3,6 +3,7 @@
   $cf = SCF::get_term_meta( $term_data->term_id, $taxonomy );
 
   // ページの固有変数を定義
+  $page_id = 'taxonomy';
   $taxonomy = 'tax_news';
   $term_data = get_term_by( 'slug', $term, $taxonomy );
 
