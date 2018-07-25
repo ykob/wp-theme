@@ -6,6 +6,8 @@
   $meta_title = '404 Not Found';
   $meta_description = '';
   $meta_keywords = '';
+
+  // 共通ヘッダを読み込み
   include 'header.php';
 ?>
 

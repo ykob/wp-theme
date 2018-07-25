@@ -12,6 +12,7 @@
   $meta_keywords = '';
   $meta_ogp_type = 'website';
 
+  // 共通ヘッダを読み込み
   include 'header.php';
 ?>
 

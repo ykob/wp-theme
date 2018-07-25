@@ -21,6 +21,7 @@
   $meta_ogp_type = 'article';
   $meta_ogp_image = $kv_array[0];
 
+  // 共通ヘッダを読み込み
   include 'header.php';
 
   while( have_posts() ) {

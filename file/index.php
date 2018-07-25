@@ -7,6 +7,7 @@
   $meta_description = get_bloginfo( 'description' );
   $meta_keywords = '';
 
+  // 共通ヘッダを読み込み
   include 'header.php';
 ?>
 

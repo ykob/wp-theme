@@ -10,6 +10,7 @@
   $meta_description = category_description( $category_id );
   $meta_keywords = '';
 
+  // 共通ヘッダを読み込み
   include 'header.php';
 ?>
 
