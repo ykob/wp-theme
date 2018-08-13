@@ -1,6 +1,8 @@
 <?php
   $template_url = get_bloginfo( 'template_url' );
-  $website_domain = get_bloginfo( 'url' );
+  $blog_url = get_bloginfo( 'url' );
+  $parse_url = parse_url( $blog_url );
+  $website_domain = $parse_url['scheme']. '://'. $parse_url['host']. '/';
   $website_name = '';
   $meta_title_merge = ( $meta_title ) ? $meta_title. ' | '. $website_name : $website_name;
   $meta_keywords_base = '';
