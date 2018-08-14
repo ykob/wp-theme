@@ -21,8 +21,6 @@
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
     <link rel="icon" href="<?php echo $template_url; ?>/assets/img/common/icon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $template_url; ?>/assets/img/common/app_icon.png">
-    <meta name="msapplication-TileImage" content="<?php echo $template_url; ?>/assets/img/common/ms_tileimage.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="<?php echo $meta_title_merge ?>">
     <meta property="og:site_name" content="<?php echo $website_name ?>">
