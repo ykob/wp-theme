@@ -13,6 +13,7 @@
   $meta_description = $term_data->description;
   $meta_keywords = '';
   $meta_ogp_type = 'website';
+  $meta_ogp_image = null;
 
   // 共通ヘッダを読み込み
   include 'header.php';

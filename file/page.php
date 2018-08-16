@@ -15,6 +15,8 @@
   $meta_title = $page_title;
   $meta_description = get_the_excerpt();
   $meta_keywords = '';
+  $meta_ogp_type = null;
+  $meta_ogp_image = null;
 
   // 共通ヘッダを読み込み
   include 'header.php';

@@ -9,6 +9,8 @@
   $meta_title = $category_name. 'カテゴリの記事一覧';
   $meta_description = category_description( $category_id );
   $meta_keywords = '';
+  $meta_ogp_type = null;
+  $meta_ogp_image = null;
 
   // 共通ヘッダを読み込み
   include 'header.php';

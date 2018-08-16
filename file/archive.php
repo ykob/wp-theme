@@ -7,6 +7,8 @@
   $meta_title = date( 'Y', get_post_time() );
   $meta_description = '';
   $meta_keywords = '';
+  $meta_ogp_type = null;
+  $meta_ogp_image = null;
 
   // 共通ヘッダを読み込み
   include 'header.php';

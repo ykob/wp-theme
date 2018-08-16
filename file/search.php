@@ -10,7 +10,8 @@
   $meta_title = '「'. $keyword_search. '」の検索結果';
   $meta_description = '「'. $keyword_search. '」の検索結果を表示しています。';
   $meta_keywords = '';
-  $meta_ogp_type = 'website';
+  $meta_ogp_type = null;
+  $meta_ogp_image = null;
 
   // 共通ヘッダを読み込み
   include 'header.php';
