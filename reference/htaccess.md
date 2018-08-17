@@ -14,7 +14,7 @@
     <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{HTTPS} off
-    RewriteRule ^(.*)$ https://www.xxx.com$1 [R=301,L]
+    RewriteRule ^(.*)$ https://www.xxx.com/$1 [R=301,L]
     RewriteCond %{HTTPS_HOST} ^xxx\.com$
-    RewriteRule ^(.*)$ https://www.xxx.com$1 [R=301,L]
+    RewriteRule ^(.*)$ https://www.xxx.com/$1 [R=301,L]
     </IfModule>
