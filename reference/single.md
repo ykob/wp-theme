@@ -44,9 +44,10 @@ singleページであってもループ処理を行わないと `the_content` �
       if ( !empty( $adjacent_prev ) || !empty( $adjacent_next ) ) :
     ?>
       <ul>
-      <?php
-        if ( !empty( $adjacent_prev ) ) :
-      ?>
+        <?php
+          if ( !empty( $adjacent_prev ) ) :
+            $prev_cf = SCF::gets( $adjacent_prev->ID );
+        ?>
         <li>
           <a href="<?php echo get_permalink( $adjacent_prev ); ?>">
             <?php echo get_the_title( $adjacent_prev ); ?>
@@ -55,15 +56,16 @@ singleページであってもループ処理を行わないと `the_content` �
         <?php
           endif;
           if ( !empty( $adjacent_next ) ) :
+            $next_cf = SCF::gets( $adjacent_next->ID );
         ?>
         <li>
           <a href="<?php echo get_permalink( $adjacent_next ); ?>">
             <?php echo get_the_title( $adjacent_next ); ?>
           </a>
         </li>
-      <?php
-        endif;
-      ?>
+        <?php
+          endif;
+        ?>
       </ul>
     <?php
       endif;
