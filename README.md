@@ -10,6 +10,7 @@
 - [PostViewsプラグインの使い方](https://github.com/ykob/wp-theme/blob/master/reference/post-views.md)
 - [よくつかうhtaccessの記述](https://github.com/ykob/wp-theme/blob/master/reference/htaccess.md)
 - [WP REST APIの使い方](https://github.com/ykob/wp-theme/blob/master/reference/rest-api.md)
+- [その他覚書](https://github.com/ykob/wp-theme/blob/master/reference/note.md)
 
 ## plugins
 
