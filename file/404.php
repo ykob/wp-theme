@@ -3,6 +3,7 @@
   $page_id = 'error';
 
   // メタ情報を定義
+  $website_domain = $parse_url['scheme']. '://'. $parse_url['host']. '/';
   $meta_path = $website_domain. '/error/404.html';
   $meta_title = '404 Not Found';
   $meta_description = '';

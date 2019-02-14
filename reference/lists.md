@@ -23,7 +23,7 @@
         ),
       );
       $posts_array = get_posts( $args );
-      if ( count($posts_array) > 0 ) :
+      if ( count( $posts_array ) > 0 ) :
         foreach ( $posts_array as $index => $post ) :
           setup_postdata( $post );
           $id = get_the_id();
