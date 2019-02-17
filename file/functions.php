@@ -28,6 +28,21 @@
   remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
   remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
+  // Gutenberg用CSSの読み込みを削除
+  add_action( 'wp_enqueue_scripts', 'remove_block_library_style' );
+  function remove_block_library_style() {
+    wp_dequeue_style( 'wp-block-library' );
+  }
+
+  // DNSプリフェッチ用コードを削除
+  add_filter( 'wp_resource_hints', 'remove_dns_prefetch', 10, 2 );
+  function remove_dns_prefetch( $hints, $relation_type ) {
+    if ( 'dns-prefetch' === $relation_type ) {
+      return array_diff( wp_dependencies_unique_hosts(), $hints );
+    }
+    return $hints;
+  }
+
   // カスタムタクソノミーとカスタム投稿タイプの設定
   add_action( 'init', function() {
     // register_taxonomy( 'cat_news', 'news', array(
