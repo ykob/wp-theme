@@ -14,6 +14,17 @@
         'tag' => is_tag() ? get_query_var( 'tag' ) : '', // タグ一覧の場合は絞り込み
         'category' => is_category() ? get_query_var( 'cat' ) : '', // カテゴリ一覧の場合は絞り込み
         'category' => get_cat_ID( 'category_name' ) // カテゴリを指定して絞り込み
+        'meta_query' => array( // カスタムフィールドの値を指定して絞り込み
+          array(
+            'key' => 'field_key1',
+            'value' => 'field_value1'
+          ),
+          array(
+            'key' => 'field_key2',
+            'value' => 'field_value2',
+            'compare' => '!='
+          )
+        ),
         'tax_query' => array( // カスタムタクソノミーで絞り込む場合はtax_queryを使う
           array(
             'taxonomy' => 'taxonomy',
@@ -61,6 +72,10 @@
       endif;
       wp_reset_postdata();
     ?>
+
+複数のカスタムフィールドを指定する場合はcompareで条件を指定できる。
+
+[関数リファレンス/WP Query - WordPress Codex 日本語版](https://wpdocs.osdn.jp/関数リファレンス/WP_Query#Custom_Field_Parameters)
 
 ## カテゴリー一覧
 
