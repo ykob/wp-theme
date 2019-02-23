@@ -78,7 +78,7 @@
     //     'with_front' => false,
     //   ),
     //   'menu_position' => 5,
-    //   'supports' => array( 'title', 'editor', 'revisions', 'excerpt', 'thumbnail' ),
+    //   'supports' => array( 'title', 'editor', 'revisions', 'author', 'excerpt', 'thumbnail' ),
     // ));
   });
 
